@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js" async></script>
+  <title>Jogo da Memória da Tia Mari</title>
+</head>
+<body>
+  <div class="title-container">
+    <h1 class="page-title">Jogo da Memoria de Natal da Tia Mari</h1>
+  </div>
+  <div class="overlay-text visible">
+    Clique para iniciar
+  </div>
+  <div id="game-over-text" class="overlay-text">
+    ACABOU!
+    <span class="overlay-text-small">Clique para reiniciar</span>
+  </div>
+  <div id="victory-text" class="overlay-text">
+    GANHOU!
+    <span class="overlay-text-small">Clique para reiniciar</span>
+  </div>
+
+  <div class="game-container">
+    <div class="game-info-container">
+      <div class="game-info">
+        Tempo <span id="time-remaining">100</span>
+      </div>
+      <div class="game-info">
+        Flips <span id="flips">0</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Santa.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Santa.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Gift.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Gift.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Tree.png">
+        <h2>Christmas Tree</h2>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Tree.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Reindeer.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Reindeer.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Snow.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Snow.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Elf.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Elf.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Socks.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Socks.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Candycane.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="snowflake" src="Assets/Images/Snowflake.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-top-right" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-left" src="Assets/Images/SnowBorder.png">
+        <img class="cob-web cob-web-bottom-right" src="Assets/Images/SnowBorder.png">
+        <img class="card-value" src="Assets/Images/Candycane.png">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

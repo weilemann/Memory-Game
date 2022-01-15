@@ -14,9 +14,14 @@
   box-sizing: border-box;
 }
 
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
 html {
   min-height: 100vh;
-  cursor: url(Assets/Cursors/Santa.cur), auto;
+  cursor: url(Assets/Cursors/normal.cur), auto;
   font-family: Lunacy;
 }
 
@@ -62,7 +67,7 @@ body {
 
 .card {
   position: relative;
-  cursor: url("Assets/Cursors/SantaHover.cur"), auto;
+  cursor: url("Assets/Cursors/text.cur"), auto;
   height: 175px;
   width: 125px;
 }
